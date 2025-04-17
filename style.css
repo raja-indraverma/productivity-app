@@ -1,0 +1,270 @@
+/* Make the body fill the screen and split into two columns */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  font-family: sans-serif;
+}
+
+/* Left side: To-Do section */
+.todo {
+  flex: 1;
+  display: flex;
+/*  padding-left: 510px;*/
+  justify-content: center; /* center .content horizontally */
+  align-items: center;     /* center .content vertically */
+  background-color: white;
+}
+
+/* Center box inside todo */
+.content {
+  width: 85%;
+  max-width: 540px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+/*  background-color: #fff;*/
+/*  box-shadow: 0 0 10px rgba(0,0,0,0.1);*/
+}
+
+/* Heading centered with image beside it */
+.todo h2 {
+  font-family: 'Orbitron', monospace;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Image next to heading */
+.todo h2 img {
+  width: 30px;
+  height: auto;
+}
+
+/* Input row */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+/*  background: #edeef0;*/
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  gap: 2rem;
+}
+
+/* Input box */
+.todo input {
+  flex: 1;
+   padding: 0.7rem 2rem;
+   font-size: 1.2rem;
+  font-family: 'Orbitron', monospace;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  border: 2px solid black;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+/* Add button */
+.todo button {
+  padding: 0.7rem 2rem;
+  font-size: 1.2rem;
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Orbitron', monospace;
+  font-weight: bold;
+/*  box-shadow: 0 2px 12px #39FF14;*/
+}
+
+
+.todo button:hover {
+  background: black;
+  color : white;
+}
+
+
+
+/* Right side: time and pomo stacked vertically */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Time on top */
+.time {
+  flex: 1;
+  background-color: white;
+}
+
+/* Pomodoro on bottom */
+.pomo {
+  flex: 1;
+/*  background-color: #ffe0e0;*/
+}
+ul{
+	padding : 0;
+	margin : 0
+}
+
+ul li {
+	list-style: none;
+	font-size: 1.2rem;
+  font-family: 'Orbitron', monospace;
+  font-weight: bold;
+	padding: 12px 8px 12px 50px;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center; /* This ensures vertical alignment */
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #555; /* hollow circle */
+  background-color: transparent;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.2s ease;
+}
+
+ul li.checked{
+	color: #555;
+	text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-color: black; /* filled circle */
+  border: none;
+}
+
+
+ul li span{
+	position: absolute;
+	right: 0;
+	top : 5px;
+	width: 40px;
+	height: 40px;
+	font-size: 22px;
+	color: #555;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+}
+ul li span:hover{
+	background: #edeef0;
+}
+
+.time{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+@font-face {
+  font-family: 'Digital7';
+  src: url('/home/devilal/Desktop/webd/productivity/digital-7/digital-7.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.clock{
+  
+    font-family: 'Digital7', monospace;
+    font-size: 5rem;
+    letter-spacing: 0.2em;
+/*    background: #111;*/
+    padding: 40px 60p/*x;
+    border-radius: 20px;
+    box-shadow: 0 0 40px #39FF14aa;
+    text-align: center;*/
+}
+
+.date{
+  font-size: 1.7rem;
+  font-family: 'Orbitron', monospace;
+  font-weight: bold;
+}
+
+
+.pomo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+.timer-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.timer-input {
+  width: 3.5rem;
+  padding: 0.6rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid black;
+/*  border-radius: 8px;*/
+  background: transparent;
+/*  color: #39FF14;*/
+  outline: none;
+
+  font-family: 'Orbitron', monospace;
+  transition: border-color 0.2s;
+}
+/*.timer-input:focus {
+  border-color: #00e6e6;
+}*/
+
+.colon {
+  font-size: 2rem;
+/*  color: #39FF14;*/
+  font-family: 'Orbitron', monospace;
+}
+
+.start-btn {
+  margin-left: 1rem;
+  padding: 0.7rem 2rem;
+  font-size: 1.2rem;
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Orbitron', monospace;
+  font-weight: bold;
+  box-shadow: 0 2px 12px #39FF14/*55;
+  transition: background 0.2s, box*/-shadow 0.2s;
+}
+.start-btn:hover {
+  background: black;
+  color : white;
+}
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Productivity</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="todo"> 
+      <div class = content>
+        <h2>To-Do List <img src="icon.png"></h2>
+        <div class = "row">
+          <input type="text" id = "input-box" name="" placeholder="add note here">
+          <button class = "" onclick = "addTask()"> Add</button>
+        </div>
+
+        <ul id = "list-container"> 
+          <li class="checked">Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li>
+
+        </ul>
+       </div>
+    </div>
+    <div class="right">
+      <div class="time"> 
+        <div class="clock" id = "clock">00 : 00 : 00</div>
+        <div class = "date" id = "date">aaj ka din</div>
+      </div>
+      <div class="pomo"> 
+      <div class="timer-input-row">
+        <input type="tel" min="0" max="99" placeholder="HH" class="timer-input" id="hours">
+        <span class="colon">:</span>
+        <input type="tel" min="0" max="59" placeholder="MM" class="timer-input" id="minutes">
+        
+        <button class="start-btn" id="startBtn">Start</button>
+      </div>
+      <div class = "clock" id = "timer">00:00:00</div>
+      </div>
+    </div>
+
+    <audio id="alarm-audio">
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+    <script src="script.js"></script>
+  </body>
+</html>

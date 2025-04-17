@@ -181,7 +181,7 @@ ul li span:hover{
 
 @font-face {
   font-family: 'Digital7';
-  src: url('/home/devilal/Desktop/webd/productivity/digital-7/digital-7.ttf') format('truetype');
+  src: url('digital-7/digital-7.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
